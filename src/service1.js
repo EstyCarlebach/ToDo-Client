@@ -9,16 +9,10 @@ axios.defaults.baseURL =process.env.REACT_APP_API_URL
 axios.interceptors.response.use(function (response) {
   return response;
 }, function (error) {
-  console.log("a");
-
-  if (error.response.status === 401) {
-    console.log("b");
-    
+  if (error.response.status === 401) {    
     return (window.location.href = "/register");
   }
   else {
-    console.log("c");
-
     swal(`${error.name}`, `${error.message}`, "error")
     console.log(+ ":" + error.message);
   }
