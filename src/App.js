@@ -13,7 +13,7 @@ const cacheRtl = createCache({
 });
 
 function App() {
-console.log("hello hi everyone my name is esty C");
+console.log("");
   return (
     <div className="App">
       
